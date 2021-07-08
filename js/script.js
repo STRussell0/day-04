@@ -80,5 +80,5 @@ function numberCheck() {
 //     }
 // }
 
-document.body.appendChild(h3);
-document.body.appendChild(addItemButton2);
+document.body.appendChild(h3); // puts the h2 on the document
+document.body.appendChild(addItemButton2); // puts the button on the document
