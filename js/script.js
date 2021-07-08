@@ -47,18 +47,30 @@ numberCheck();
 
 })
 
+
+
 function numberCheck() {
-    const number3 = parseInt(prompt("Please enter the first number:", 10)); //parseInt used to convert input to integers
 
-    if (isNaN(number3)) {
-        number3 = parseInt(prompt("That is not a number. Please enter a number:","")) //prompts user they did not enter a number, please enter a number
+    function checkNum(num) {
+
+        while (!Number.isInteger(parseInt(num))){
+            num = prompt("That wasn't a number, please pick a number.")
+        }
+        return num;
     }
 
-    const number4 = parseInt(prompt("Please enter the second number:", 10));
+    const number3 = checkNum(parseInt(prompt("Please enter the first number:", 10))); //parseInt used to convert input to integers
+    console.log(number3);
 
-    if (isNaN(number4)) {
-        number4 = parseInt(prompt("That is not a number. Please enter a number:",""))
-    }
+    // if (isNaN(number3)) {
+    //     number3 = parseInt(prompt("That is not a number. Please enter a number:","")) //prompts user they did not enter a number, please enter a number
+    // }
+
+    const number4 = checkNum(parseInt(prompt("Please enter the second number:", 10)));
+    console.log(number4);
+    // if (isNaN(number4)) {
+    //     number4 = parseInt(prompt("That is not a number. Please enter a number:",""))
+    // }
 
     if (number3 < number4) { //If statement to compare the variables
         alert(number4 + ' Is the larger number!'); //alert when number2 is bigger
